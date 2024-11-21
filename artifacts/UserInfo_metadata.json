@@ -37,7 +37,13 @@
 				"type": "event"
 			},
 			{
-				"inputs": [],
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "userAddress",
+						"type": "address"
+					}
+				],
 				"name": "getUserInfo",
 				"outputs": [
 					{
@@ -54,6 +60,25 @@
 						"internalType": "string",
 						"name": "",
 						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "userAddress",
+						"type": "address"
+					}
+				],
+				"name": "hasUserInfo",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
 					}
 				],
 				"stateMutability": "view",
@@ -111,11 +136,11 @@
 	},
 	"sources": {
 		"UserInfo.sol": {
-			"keccak256": "0xad39d414995ab0d2509c1582e37565a2608abadffa7b5f2151d8f2351d43c232",
+			"keccak256": "0x13c54c0c6e5e56d80d9914c5137d78f2becc13e4f69c5c86c6dfb74b59c180c4",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://86920b102b2bf94081254598203c80666dfc6e8c53059eaa05cb6901280e752a",
-				"dweb:/ipfs/QmXTUFAitJLsSC7XZndaPgk76cFZUCKaVX6YugGwEcYEzd"
+				"bzz-raw://241a14037013f57268de60c2f84f9d89bb24b73e6c2254cc5a5ee348681493ad",
+				"dweb:/ipfs/QmXbAVD6EzK31qrZJYBU3qXa9wqCT4XmvVWkuVB9T8P3ks"
 			]
 		}
 	},

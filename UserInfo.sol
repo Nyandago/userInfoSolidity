@@ -20,8 +20,13 @@ contract UserInfo {
     }
 
     //NB. 'view' means function can only read data
-    function getUserInfo() public view returns (string memory, uint, string memory){
-        PersonalInfo memory info = users[msg.sender];
+    function getUserInfo(address userAddress) public view returns (string memory, uint, string memory){
+        PersonalInfo memory info = users[userAddress];
         return (info.name, info.age, info.email);
+    }
+
+    //tells if address has user info in it
+    function hasUserInfo(address userAddress) public view returns (bool){
+        return bytes(users[userAddress].name).length > 0;
     }
 }
