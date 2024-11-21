@@ -21,6 +21,8 @@ contract UserInfo {
 
     event UserInfoUpdated(address indexed user, uint userID, string name, uint age, string email); //notify all users on user update
 
+    event OwnershipTransferred(address indexed previousOwner, address indexed newOwner);
+
     constructor(){
         owner = msg.sender;
     }
@@ -39,5 +41,11 @@ contract UserInfo {
     //tells if address has user info in it
     function hasUserInfo(address userAddress, uint _userID) public view returns (bool){
         return bytes(users[userAddress][_userID].name).length > 0;
+    }
+
+    function transferOwnership(address _newOwner) public onlyOwner{
+        require(_newOwner != owner, "New Owner can not be the same as current owner");
+        emit OwnershipTransferred(owner, _newOwner);
+        owner = _newOwner;
     }
 }

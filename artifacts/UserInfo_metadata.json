@@ -16,6 +16,25 @@
 					{
 						"indexed": true,
 						"internalType": "address",
+						"name": "previousOwner",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "newOwner",
+						"type": "address"
+					}
+				],
+				"name": "OwnershipTransferred",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
 						"name": "user",
 						"type": "address"
 					},
@@ -145,6 +164,19 @@
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_newOwner",
+						"type": "address"
+					}
+				],
+				"name": "transferOwnership",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
 			}
 		],
 		"devdoc": {
@@ -175,11 +207,11 @@
 	},
 	"sources": {
 		"UserInfo.sol": {
-			"keccak256": "0xd6d7518b5f2d4e1ae4f1bfcb5ac3e0149d93d57c50126d576bb982644563d70d",
+			"keccak256": "0xe8c0c40caea42ea68af559c639e6bf3189cd9e973d14feca34594c763b029094",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://21e84cd76e01f41746f08dc784f1f0caa988e646a6ba1b8b36aa0d05f3b9ccb4",
-				"dweb:/ipfs/QmWBzEBh9Snbid3LheXEipTTNySqMgZZuLwmihzYrZrWps"
+				"bzz-raw://f7dde626aa88b0c9887834817f4ed72b5371a5c8dbc57ff92744dc408531cb8f",
+				"dweb:/ipfs/QmYb7MLo1K6kXAQ4deD1u6Gt9Wdz6XFckfLnM3GdwpXKtn"
 			]
 		}
 	},
