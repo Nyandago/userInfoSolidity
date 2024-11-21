@@ -10,7 +10,7 @@ contract UserInfo {
         string email;
     }
 
-    address public owner;
+    address private owner;
 
     mapping(address => mapping(uint => PersonalInfo)) private users; // create address
 
@@ -48,4 +48,9 @@ contract UserInfo {
         emit OwnershipTransferred(owner, _newOwner);
         owner = _newOwner;
     }
+
+    function isOwner(address _enteredAddress) public view returns (bool){
+        return _enteredAddress == owner;
+    }
+    
 }

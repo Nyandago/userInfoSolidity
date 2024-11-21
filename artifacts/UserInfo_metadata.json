@@ -125,13 +125,19 @@
 				"type": "function"
 			},
 			{
-				"inputs": [],
-				"name": "owner",
-				"outputs": [
+				"inputs": [
 					{
 						"internalType": "address",
-						"name": "",
+						"name": "_enteredAddress",
 						"type": "address"
+					}
+				],
+				"name": "isOwner",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
 					}
 				],
 				"stateMutability": "view",
@@ -207,11 +213,11 @@
 	},
 	"sources": {
 		"UserInfo.sol": {
-			"keccak256": "0xe8c0c40caea42ea68af559c639e6bf3189cd9e973d14feca34594c763b029094",
+			"keccak256": "0xf67fa4190a7155027c49fc4c9be69cf0a2b063e77bb1e4647bdadf00f20096b0",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://f7dde626aa88b0c9887834817f4ed72b5371a5c8dbc57ff92744dc408531cb8f",
-				"dweb:/ipfs/QmYb7MLo1K6kXAQ4deD1u6Gt9Wdz6XFckfLnM3GdwpXKtn"
+				"bzz-raw://cc10b41221a4d84bed7cf7db83d74f08f824f2cbb1bf7103533a5b2504e9a41e",
+				"dweb:/ipfs/QmcgSSddrNVTzdeWxRA5RvgQkYy29Mj6pJVAigegQvaz9n"
 			]
 		}
 	},
