@@ -6,6 +6,11 @@
 	"output": {
 		"abi": [
 			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
 				"anonymous": false,
 				"inputs": [
 					{
@@ -13,6 +18,12 @@
 						"internalType": "address",
 						"name": "user",
 						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "userID",
+						"type": "uint256"
 					},
 					{
 						"indexed": false,
@@ -42,6 +53,11 @@
 						"internalType": "address",
 						"name": "userAddress",
 						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_userID",
+						"type": "uint256"
 					}
 				],
 				"name": "getUserInfo",
@@ -71,6 +87,11 @@
 						"internalType": "address",
 						"name": "userAddress",
 						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_userID",
+						"type": "uint256"
 					}
 				],
 				"name": "hasUserInfo",
@@ -85,7 +106,25 @@
 				"type": "function"
 			},
 			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
 				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_userID",
+						"type": "uint256"
+					},
 					{
 						"internalType": "string",
 						"name": "_name",
@@ -136,11 +175,11 @@
 	},
 	"sources": {
 		"UserInfo.sol": {
-			"keccak256": "0x13c54c0c6e5e56d80d9914c5137d78f2becc13e4f69c5c86c6dfb74b59c180c4",
+			"keccak256": "0xd6d7518b5f2d4e1ae4f1bfcb5ac3e0149d93d57c50126d576bb982644563d70d",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://241a14037013f57268de60c2f84f9d89bb24b73e6c2254cc5a5ee348681493ad",
-				"dweb:/ipfs/QmXbAVD6EzK31qrZJYBU3qXa9wqCT4XmvVWkuVB9T8P3ks"
+				"bzz-raw://21e84cd76e01f41746f08dc784f1f0caa988e646a6ba1b8b36aa0d05f3b9ccb4",
+				"dweb:/ipfs/QmWBzEBh9Snbid3LheXEipTTNySqMgZZuLwmihzYrZrWps"
 			]
 		}
 	},

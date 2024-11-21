@@ -10,23 +10,34 @@ contract UserInfo {
         string email;
     }
 
-    mapping(address => PersonalInfo) private users; // create address
+    address public owner;
 
-    event UserInfoUpdated(address indexed user, string name, uint age, string email); //notify all users on user update
+    mapping(address => mapping(uint => PersonalInfo)) private users; // create address
 
-    function setUserInfo(string memory _name, uint _age, string memory _email) public {
-        users[msg.sender] = PersonalInfo(_name, _age, _email); //take user input then store into address
-        emit UserInfoUpdated(msg.sender, _name, _age, _email); //call broadcaster to notify all users
+    modifier onlyOwner(){
+        require(msg.sender == owner , "Only the owner is allowed to perform this transaction");
+        _;
+    }
+
+    event UserInfoUpdated(address indexed user, uint userID, string name, uint age, string email); //notify all users on user update
+
+    constructor(){
+        owner = msg.sender;
+    }
+
+    function setUserInfo(uint _userID, string memory _name, uint _age, string memory _email) public onlyOwner {
+        users[msg.sender][_userID] = PersonalInfo(_name, _age, _email); //take user input then store into address
+        emit UserInfoUpdated(msg.sender, _userID, _name, _age, _email); //call broadcaster to notify all users
     }
 
     //NB. 'view' means function can only read data
-    function getUserInfo(address userAddress) public view returns (string memory, uint, string memory){
-        PersonalInfo memory info = users[userAddress];
+    function getUserInfo(address userAddress, uint _userID) public view returns (string memory, uint, string memory){
+        PersonalInfo memory info = users[userAddress][_userID];
         return (info.name, info.age, info.email);
     }
 
     //tells if address has user info in it
-    function hasUserInfo(address userAddress) public view returns (bool){
-        return bytes(users[userAddress].name).length > 0;
+    function hasUserInfo(address userAddress, uint _userID) public view returns (bool){
+        return bytes(users[userAddress][_userID].name).length > 0;
     }
 }
