@@ -52,5 +52,9 @@ contract UserInfo {
     function isOwner(address _enteredAddress) public view returns (bool){
         return _enteredAddress == owner;
     }
-    
+
+    function returnOwnerAddress() public view returns (address){
+        return owner;
+    }
+
 }

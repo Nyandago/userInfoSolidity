@@ -144,6 +144,19 @@
 				"type": "function"
 			},
 			{
+				"inputs": [],
+				"name": "returnOwnerAddress",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
 				"inputs": [
 					{
 						"internalType": "uint256",
@@ -213,11 +226,11 @@
 	},
 	"sources": {
 		"UserInfo.sol": {
-			"keccak256": "0xf67fa4190a7155027c49fc4c9be69cf0a2b063e77bb1e4647bdadf00f20096b0",
+			"keccak256": "0xd1a78ab2ec7ea4d881afaef462e0ee861339e8aba5f9261a80d16101167a855f",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://cc10b41221a4d84bed7cf7db83d74f08f824f2cbb1bf7103533a5b2504e9a41e",
-				"dweb:/ipfs/QmcgSSddrNVTzdeWxRA5RvgQkYy29Mj6pJVAigegQvaz9n"
+				"bzz-raw://c6f17ea26b6115f84863a5888c7abd1105599a6466b418cb928c4f954a7c6ba3",
+				"dweb:/ipfs/QmdgkDXXCbJ8vW4KptghGADyEnuoryQoaxaphND76uJhyi"
 			]
 		}
 	},
